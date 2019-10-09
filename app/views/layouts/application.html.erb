@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WindowsStore</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="contact-info">
+          <div class="phone-number">
+            <a href="tel:380672537125">Зателефонуйте нам +380672537125 
+              <%= show_svg('device-mobile.svg') %>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:vasul253712@gmail.com">Напишіть нам vasu2537125@gmail.com
+              <%= show_svg('mail.svg') %>
+            </a>
+          </div>
+        </div>
+        <div class="social-media">
+          <div class="facebook-ico">
+            <a href="https://www.facebook.com/profile.php?id=100006156246012">
+              <%= show_svg('facebook.svg') %>
+            </a>
+          </div>
+          <div class="inst-ico">
+            <a href="https://www.instagram.com/vasyl_mutskaniuk/">
+              <%= show_svg('instagram-logo.svg') %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
+    <footer>
+      <div class="wrapper">
+        <p class="footer-info">
+          © 2019 Металопластикові вікна та двері - Компанія Вікна-Захід
+        </p>
+        <div class="social-media">
+          <div class="facebook-ico">
+            <a href="https://www.facebook.com/profile.php?id=100006156246012">
+              <%= show_svg('facebook.svg') %>
+            </a>
+          </div>
+          <div class="inst-ico">
+            <a href="https://www.instagram.com/vasyl_mutskaniuk/">
+              <%= show_svg('instagram-logo.svg') %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

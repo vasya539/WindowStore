@@ -1,0 +1,64 @@
+@import "bootstrap";
+
+%gradient-bg {
+  background: rgba(68,160,213,1);
+  background: -moz-linear-gradient(left, rgba(68,160,213,1) 0%, rgba(5,151,255,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(68,160,213,1)), color-stop(100%, rgba(5,151,255,1)));
+  background: -webkit-linear-gradient(left, rgba(68,160,213,1) 0%, rgba(5,151,255,1) 100%);
+  background: -o-linear-gradient(left, rgba(68,160,213,1) 0%, rgba(5,151,255,1) 100%);
+  background: -ms-linear-gradient(left, rgba(68,160,213,1) 0%, rgba(5,151,255,1) 100%);
+  background: linear-gradient(to right, rgba(68,160,213,1) 0%, rgba(5,151,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44a0d5', endColorstr='#0597ff', GradientType=1 );
+}
+%display-flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  @extend %gradient-bg;
+  .wrapper {
+    @extend %display-flex;
+    justify-content: space-between;
+    }
+}
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.contact-info, .social-media {
+  @extend %display-flex;
+  padding: 7px;
+  div {
+    margin: 7px;
+  }
+  div a {
+    color: #fff;
+    text-decoration: none;
+    svg {
+      margin: 2px;
+    }
+  }
+}
+
+footer {
+  @extend %gradient-bg;
+  .wrapper {
+    @extend %display-flex;
+    justify-content: space-between;
+    .footer-info {
+      @extend %display-flex;
+      align-items: center;
+      margin: 0;
+      color: white;
+    } 
+  }
+}
